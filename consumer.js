@@ -59,13 +59,16 @@ amqp.connect(process.env.AMQP_URL, function (
               msg.content.toString()
             );
             const event = JSON.parse(msg.content)
+            const websocketClient = websocketClients[event.account_id]
             console.log('account_id', event.account_id)
             if (event.event === 'system_initialize_flow') {
               RegisterExecutionInteractor.call(event)
-              websocketClients[event.account_id].send(msg.content.toString());
             } else if (event.event === 'system_finish_flow') {
               TerminateExecutionInteractor.call(event)
-              websocketClients[event.account_id].send(msg.content.toString());
+            }
+
+            if (websocketClient && event.object.type === 'flow') {
+              websocketClient.send(msg.content.toString());
             }
           },
           {
