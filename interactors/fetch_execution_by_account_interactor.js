@@ -16,7 +16,7 @@ const call = async (account_id) => {
     console.log(rawData)
 
     const dates = [];
-    for (let i = 0; i < 48; i++) {
+    for (let i = 0; i < 24; i++) {
         const newDate = dateFns.add(date, { hours: -i })
         dates.unshift(dateFns.format(newDate, 'yyyy-MM-dd HH:00'))
     }
