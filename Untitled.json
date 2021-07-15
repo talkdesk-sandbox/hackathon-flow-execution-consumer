@@ -1,0 +1,30 @@
+{
+    "account_id": "5fce39cfe2f4600001d3f625",
+    "platform_tid": "f0fdef1c-6101-4cba-ae69-85f2537e91a6",
+    "actor": {
+        "type": "system",
+        "name": "orchestrator",
+        "id": "nc-orchestrator-routing-consumer-77c48fff89-66752"
+    },
+    "verb": "initialize",
+    "object": {
+        "type": "flow",
+        "id": "19e3ff410d0948798b91b31145e1a590",
+        "flow_definition_id": "8cdafb8afca943b9a5d839aba83e3533",
+        "trigger_type": "api",
+        "initial_step_id": "9c5633438bbc48acbeae7f0c674096f2",
+        "interaction_resources": {
+            "account_id": "5fce39cfe2f4600001d3f625",
+            "started_at": "2021-07-15T10:24:23.311Z"
+        }
+    },
+    "generator": {
+        "type": "system",
+        "name": "orchestrator",
+        "id": "nc-orchestrator-routing-consumer-77c48fff89-66752"
+    },
+    "interaction_id": "cfbd097f496a44949649564a44d22413",
+    "event": "system_initialize_flow",
+    "event_id": "6ae2c32d1fdf4967852c944c422fd84b",
+    "timestamp": "2021-07-15T10:24:23.314Z"
+}
