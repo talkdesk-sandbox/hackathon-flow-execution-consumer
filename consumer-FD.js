@@ -36,7 +36,6 @@ amqp.connect(process.env.AMQP_TALKDESK_URL, function (error0, connection) {
             const event = JSON.parse(msg.content);
 
             const events = new Set([
-              "user_publish_step_definition",
               "user_create_flow_definition",
               "user_publish_flow_definition",
             ]);
