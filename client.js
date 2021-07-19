@@ -1,9 +1,9 @@
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://localhost:8080');
+const ws = new WebSocket('ws://ca725190d298.ngrok.io');
 
 ws.on('open', function open() {
-  ws.send('5a5c93a8c6a985000b426697');
+  ws.send('60f1b990b1a6b0e44edbec18');
 });
 
 ws.on('message', function incoming(message) {

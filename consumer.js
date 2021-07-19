@@ -42,13 +42,13 @@ amqp.connect(process.env.AMQP_URL, function (
     });
 
     channel.assertQueue(
-      "studio.hackaton.to.delete",
+      "studio.hackaton.to.delete_cenas",
       {
         exclusive: false,
       },
       function (error2, q) {
         console.log(" [*] Waiting for logs. To exit press CTRL+C");
-        channel.bindQueue(q.queue, exchange, "orchestrator.flows");
+        channel.bindQueue(q.queue, exchange, "orchestrator.*");
 
         channel.consume(
           q.queue,
